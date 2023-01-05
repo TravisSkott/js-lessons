@@ -27,21 +27,3 @@
 //     console.log("Data:", data)
 // }
 // fetchAsinc()
-
-
-                                // PROXY
-// Objects
-let person = {
-    name:"Daniil",
-    age: 20,
-    job:"Js developer"
-}
-
-const op = new Proxy(person,{
-    get(target,prop){
-        console.log(target)
-        console.log(prop)
-        return target[prop]   
-    }
-})
-console.log(op.age)
