@@ -76,20 +76,20 @@
 // map.forEach((val,key,m)=>{
 //     console.log(val)
 // })
-const user = [
-    { name: "Daniil", age: 20 },
-    { name: "Nastya", age: 19 },
-    { name: "Vanya", age: 24 }
-]
+// const user = [
+//     { name: "Daniil", age: 20 },
+//     { name: "Nastya", age: 19 },
+//     { name: "Vanya", age: 24 }
+// ]
 
-let visitors = new Map()
-visitors
-    .set(user[0], new Date())
-    .set(user[1], new Date().getTime() + 300 * 60)
-    .set(user[2], new Date().getTime() + 60)
+// let visitors = new Map()
+// visitors
+//     .set(user[0], new Date())
+//     .set(user[1], new Date().getTime() + 300 * 60)
+//     .set(user[2], new Date().getTime() + 60)
 
-let visitorsCheck = (user) => {
-    return visitors.get(user)
-}
+// let visitorsCheck = (user) => {
+//     return visitors.get(user)
+// }
 
-console.log(visitorsCheck(user[2]))
+// console.log(visitorsCheck(user[2]))
