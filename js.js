@@ -47,23 +47,23 @@
 
 // console.log(newPeople)
 
-const obj = {
-    name: "Daniil",
-    age: 20,
-    sex: "male"
-}
+// const obj = {
+//     name: "Daniil",
+//     age: 20,
+//     sex: "male"
+// }
 
-const entries = [
-    ["name","Daniil"],
-    ["age",20],
-    ["sex","male"]
-]
+// const entries = [
+//     ["name","Daniil"],
+//     ["age",20],
+//     ["sex","male"]
+// ]
 // console.log(Object.entries(obj))
 // console.log(Object.fromEntries(arr))
-let map = new Map(entries)
+// let map = new Map(entries)
 // console.log(map.get("age"))
-map.set(true,"NaN ??")
-console.log(map)
+// map.set(true,"NaN ??")
+// console.log(map)
 
 // for(let [key,val] of map.entries()){
 //     console.log(typeof key)
@@ -73,6 +73,23 @@ console.log(map)
 //     console.log(key)
 // }
 
-map.forEach((val,key,m)=>{
-    console.log(val)
-})
+// map.forEach((val,key,m)=>{
+//     console.log(val)
+// })
+const user = [
+    { name: "Daniil", age: 20 },
+    { name: "Nastya", age: 19 },
+    { name: "Vanya", age: 24 }
+]
+
+let visitors = new Map()
+visitors
+    .set(user[0], new Date())
+    .set(user[1], new Date().getTime() + 300 * 60)
+    .set(user[2], new Date().getTime() + 60)
+
+let visitorsCheck = (user) => {
+    return visitors.get(user)
+}
+
+console.log(visitorsCheck(user[2]))
