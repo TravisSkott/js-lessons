@@ -27,3 +27,52 @@
 //     console.log("Data:", data)
 // }
 // fetchAsinc()
+
+// let people = [
+//     {name:"Daniil", age:20,sex:"male"},
+//     {name:"Kris", age:15,sex:"female"},
+//     {name:"Masha", age:28,sex:"female"},
+//     {name:"Vanya", age:11,sex:"male"},
+//     {name:"Alya", age:21,sex:"female"},
+//     {name:"Fedor", age:50,sex:"male"},
+//     {name:"Denis", age:32,sex:"male"},
+// ]
+
+// const newPeople = people
+//     .filter(person=>person.age>18)
+//     .reduce((total,person)=>{
+//         return total + person.age
+//     },0)
+
+
+// console.log(newPeople)
+
+const obj = {
+    name: "Daniil",
+    age: 20,
+    sex: "male"
+}
+
+const entries = [
+    ["name","Daniil"],
+    ["age",20],
+    ["sex","male"]
+]
+// console.log(Object.entries(obj))
+// console.log(Object.fromEntries(arr))
+let map = new Map(entries)
+// console.log(map.get("age"))
+map.set(true,"NaN ??")
+console.log(map)
+
+// for(let [key,val] of map.entries()){
+//     console.log(typeof key)
+// }
+
+// for(let key of map.keys()){
+//     console.log(key)
+// }
+
+map.forEach((val,key,m)=>{
+    console.log(val)
+})
