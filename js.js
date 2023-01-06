@@ -118,45 +118,16 @@
 // pickPeaks([1, 2, 3, 8, 7, 6, 5, 4, 1, 2, 3])//{pos[2,4], pick[3,5]}
 
 function validParentheses(parens) {
-  if(parens.trim() == "") return true
   let arr = parens.split('')
-  // for (let i = 0; i < arr.length; i++) {
-  //   if (arr[0] == ")" || arr[arr.length - 1] == "(") return false 
-
-  //   let itemIndex = arr.findIndex(item => item == "(")
-  //   delete arr[itemIndex]
-  // // console.log(arr)
-   
-  //   // if (arr.includes("(") === false) return false 
-  //   if (true) {
-  //     for (let j = arr.length; j > 0; j--) {
-  //       let itemIndex = arr.findIndex(item => item == ")")
-  //       delete arr[itemIndex]
-  //       console.log(arr)
-  //       if(arr.includes("(") === false && arr.includes(")") === false){console.log(true); return true}
-  //       if (arr.includes("(") === false || arr.includes(")") === false) {console.log(false);return false} 
-  //       break
-  //     }
-  //   }
-  // }
-  // let a = 2
- while(true){
-  if(arr.length == 0) {
-    console.log(null);
-    a = false
-    return true
-  }else if (arr[0] == ")" || arr[arr.length - 1] == "("){ 
-    console.log(false);
-    return false 
-  }else if(arr.includes("(") && arr.includes(")")){
-    let itemLeft = arr.findIndex(item => item == "(")
-    arr.splice(itemLeft,1)
-    let itemRight = arr.findIndex(item => item == ")")
-    arr.splice(itemRight,1)
-    console.log(arr)
+  while (true) {
+    if (arr.length == 0) return true
+    else if (arr[0] == ")" || arr[arr.length - 1] == "(") return false
+    else if (arr.includes("(") && arr.includes(")")) {
+      let itemLeft = arr.findIndex(item => item == "(")
+      arr.splice(itemLeft, 1)
+      let itemRight = arr.findIndex(item => item == ")")
+      arr.splice(itemRight, 1)
+    }
   }
- }
-
-
 }
 validParentheses("()")
