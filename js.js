@@ -117,3 +117,39 @@
 //   console.log(key*3)
 // }
 // console.log(set)
+
+
+let requestURL = "https://jsonplaceholder.typicode.com/users"
+
+
+function sendRequest(method,url,body=null) {//If we are working with "GET" - body = null
+    return new Promise((resolve, reject)=>{
+        const xhr = new XMLHttpRequest()
+
+        xhr.open(method, url)
+        xhr.responseType = "json"
+        xhr.setRequestHeader("Content-Type","application/json")//To display in console "body"
+
+        xhr.onload = () => {
+            if(xhr.status >= 400) reject(xhr.response)
+            else resolve(xhr.response)
+        }
+        xhr.send(JSON.stringify(body))//JSON.stringify modify to string
+    })
+    
+}
+// sendRequest("GET",requestURL)
+// .then(data=>{
+//     console.log(data)
+// })
+// .catch(err=>{
+//     console.error(err)
+// })
+let body = {name:"Daniil",age:20}
+sendRequest("POST",requestURL,body)
+.then(data=>{
+    console.log(data)
+})
+.catch(err=>{
+    console.error(err)
+})
