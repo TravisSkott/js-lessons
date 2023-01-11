@@ -136,7 +136,7 @@
 //         }
 //         xhr.send(JSON.stringify(body))//JSON.stringify modify to string
 //     })
-    
+
 // }
 // sendRequest("GET",requestURL)
 // .then(data=>{
@@ -157,21 +157,21 @@
 //////////FETCH
 
 
-let requestURL = "https://jsonplaceholder.typicode.com/users"
+// let requestURL = "https://jsonplaceholder.typicode.com/users"
 
 
-function sendRequest(method,url,body=null) {//If we are working with "GET" - body = null
-    return fetch(url)// return Promise
-    
-}
-sendRequest("GET",requestURL)
-.then(data=>{
-    console.log(data)
-})
-.catch(err=>{
-    console.error(err)
-})
-let body = {name:"Daniil",age:20}
+// function sendRequest(method,url,body=null) {//If we are working with "GET" - body = null
+//     return fetch(url)// return Promise
+
+// }
+// sendRequest("GET",requestURL)
+// .then(data=>{
+//     console.log(data)
+// })
+// .catch(err=>{
+//     console.error(err)
+// })
+// let body = {name:"Daniil",age:20}
 // sendRequest("POST",requestURL,body)
 // .then(data=>{
 //     console.log(data)
@@ -179,3 +179,23 @@ let body = {name:"Daniil",age:20}
 // .catch(err=>{
 //     console.error(err)
 // })
+
+function cakes(recipe, available) {
+    let temp
+    for(let ingridient in recipe){
+        if(ingridient in available){
+            let possibleCackes = Math.floor(available[ingridient]/recipe[ingridient])
+        
+            if( possibleCackes < temp || !temp ){
+                if(temp == 0) console.log(0)
+                temp = possibleCackes
+                console.log(temp)
+
+            } 
+        }else{
+            return console.log("Ноль "+0)
+        }
+    }
+    return console.log("temp"+temp)
+}
+cakes({ flour: 300, sugar: 150, milk: 100}, {sugar: 70, flour: 2000, milk: 2000})
