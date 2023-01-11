@@ -94,40 +94,26 @@
 
 // console.log(visitorsCheck(user[2]))
 
-// function pickPeaks(arr) {
-//     let array = arr
-//     // let firstElem = array[0]
-//     const obj = {
-//         pos: [],
-//         pick: []
+// function validParentheses(parens) {
+//   let arr = parens.split('')
+//   while (true) {
+//     if (arr.length == 0) return true
+//     else if (arr[0] == ")" || arr[arr.length - 1] == "(") return false
+//     else if (arr.includes("(") && arr.includes(")")) {
+//       let itemLeft = arr.findIndex(item => item == "(")
+//       arr.splice(itemLeft, 1)
+//       let itemRight = arr.findIndex(item => item == ")")
+//       arr.splice(itemRight, 1)
 //     }
-//     let i = 1
-//     for (let i = 1; i < array.length-1; i++) {
-//         if (array[i] < array[i + 1] & array[i - 1] > array[i]) {
-//             continue
-//         } else if (  array[i] > array[i + 1] & array[i ]>array[i - 1]) {
-//             console.log(array[i])
-//         }
-
-//     }
-
-
-//     //  return {pos:[],peaks:[]}
+//   }
 // }
+// validParentheses("()")
 
-// pickPeaks([1, 2, 3, 8, 7, 6, 5, 4, 1, 2, 3])//{pos[2,4], pick[3,5]}
 
-function validParentheses(parens) {
-  let arr = parens.split('')
-  while (true) {
-    if (arr.length == 0) return true
-    else if (arr[0] == ")" || arr[arr.length - 1] == "(") return false
-    else if (arr.includes("(") && arr.includes(")")) {
-      let itemLeft = arr.findIndex(item => item == "(")
-      arr.splice(itemLeft, 1)
-      let itemRight = arr.findIndex(item => item == ")")
-      arr.splice(itemRight, 1)
-    }
-  }
-}
-validParentheses("()")
+// SET
+
+// let set = [...new Set([0,1,2,4,4,5,6,6])]
+// for(let key of set){
+//   console.log(key*3)
+// }
+// console.log(set)
