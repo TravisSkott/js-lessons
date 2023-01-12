@@ -180,22 +180,69 @@
 //     console.error(err)
 // })
 
-function cakes(recipe, available) {
-    let temp
-    for(let ingridient in recipe){
-        if(ingridient in available){
-            let possibleCackes = Math.floor(available[ingridient]/recipe[ingridient])
-        
-            if( possibleCackes < temp || !temp ){
-                if(temp == 0) console.log(0)
-                temp = possibleCackes
-                console.log(temp)
+// function cakes(recipe, available) {
+//     let temp
+//     for(let ingridient in recipe){
+//         if(ingridient in available){
+//             let possibleCackes = Math.floor(available[ingridient]/recipe[ingridient])
 
-            } 
-        }else{
-            return console.log("Ноль "+0)
-        }
-    }
-    return console.log("temp"+temp)
-}
-cakes({ flour: 300, sugar: 150, milk: 100}, {sugar: 70, flour: 2000, milk: 2000})
+//             if( possibleCackes < temp || !temp ){
+//                 if(temp == 0) console.log(0)
+//                 temp = possibleCackes
+//                 console.log(temp)
+
+//             } 
+//         }else{
+//             return console.log("Ноль "+0)
+//         }
+//     }
+//     return console.log("temp"+temp)
+// }
+// cakes({ flour: 300, sugar: 150, milk: 100}, {sugar: 70, flour: 2000, milk: 2000})
+
+// function orderWeight(strng) {
+//     let arr = strng.split(" ")
+//     let sum = (item) => {
+//         let sum = 0
+//         for (let i = 0; i < item.length; i++) {
+//             sum += +item[i]
+//         }
+//         return sum
+//     }
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             let temp;
+//             if (sum(arr[j]) < sum(arr[i])) {
+//                 temp = arr[i]
+//                 arr[i] = arr[j]
+//                 arr[j] = temp
+//             } else if (sum(arr[j]) == sum(arr[i])) {
+//                 if (arr[j] < arr[i]) {
+//                     temp = arr[i]
+//                     arr[i] = arr[j]
+//                     arr[j] = temp
+//                 }
+//             }
+//         }
+
+//     }
+//     return arr.join(",")
+// }
+
+///THE BEST WAY
+// function orderWeight(strng) {
+//     const sum = (str)=>str.split('').reduce((sum,el)=>(sum+(+el)),0);
+//      function comp(a,b){
+        
+//         console.log("a "+a)
+//        console.log("b "+b)
+//        let sumA = sum(a);
+//        let sumB = sum(b);
+//        console.log("sumA "+sumA)
+//        console.log("sumB "+sumB)
+//        console.log(sumA === sumB ? a.localeCompare(b) : sumA - sumB)
+//        return sumA === sumB ? a.localeCompare(b) : sumA - sumB;
+//       };
+//     return console.log(strng.split(' ').sort(comp).join(' '));
+//    }
+// orderWeight("103 123 4444 99 2000")
