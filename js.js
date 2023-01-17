@@ -117,17 +117,17 @@
 
 // pickPeaks([1, 2, 3, 8, 7, 6, 5, 4, 1, 2, 3])//{pos[2,4], pick[3,5]}
 
-function validParentheses(parens) {
-  let arr = parens.split('')
-  while (true) {
-    if (arr.length == 0) return true
-    else if (arr[0] == ")" || arr[arr.length - 1] == "(") return false
-    else if (arr.includes("(") && arr.includes(")")) {
-      let itemLeft = arr.findIndex(item => item == "(")
-      arr.splice(itemLeft, 1)
-      let itemRight = arr.findIndex(item => item == ")")
-      arr.splice(itemRight, 1)
-    }
-  }
-}
-validParentheses("()")
+// function validParentheses(parens) {
+//   let arr = parens.split('')
+//   while (true) {
+//     if (arr.length == 0) return true
+//     else if (arr[0] == ")" || arr[arr.length - 1] == "(") return false
+//     else if (arr.includes("(") && arr.includes(")")) {
+//       let itemLeft = arr.findIndex(item => item == "(")
+//       arr.splice(itemLeft, 1)
+//       let itemRight = arr.findIndex(item => item == ")")
+//       arr.splice(itemRight, 1)
+//     }
+//   }
+// }
+// validParentheses("()")
