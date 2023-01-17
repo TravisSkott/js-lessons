@@ -276,3 +276,11 @@
 //   }
 
 // isPrime()
+
+// let citiesBelarus = ["Pinsk","Minsk","Grodno","Mogilev"]
+// console.log(...citiesBelarus)
+// let obj ={
+//     city:"Pinsk",
+//     population:133000,
+// }
+
