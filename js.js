@@ -249,7 +249,7 @@
 // function orderWeight(strng) {
 //     const sum = (str)=>str.split('').reduce((sum,el)=>(sum+(+el)),0);
 //      function comp(a,b){
-        
+
 //         console.log("a "+a)
 //        console.log("b "+b)
 //        let sumA = sum(a);
@@ -263,3 +263,16 @@
 //    }
 // orderWeight("103 123 4444 99 2000")
 
+
+// function gap(g, m, n) {
+
+//     // your code
+// }
+
+// function isPrime(num) {
+//     for(var i = 2; i < num; i++)
+//       if(num % i === 0) return false;
+//     return num > 1;
+//   }
+
+// isPrime()
