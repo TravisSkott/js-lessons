@@ -306,15 +306,17 @@
 //     population:133000,
 // }
 
-function toUnderscore(string) {
-  let pos=0
-  for(let i=1;i<string.length;i++){
-    if(string[i] == string[i].toUpperCase()){
-        console.log(string.slice(pos,i))
-        pos = i
-        
-    }
-    // console.log(i)
-  }
-}
-toUnderscore("MoviesAndBooks")
+// function toUnderscore(string) {
+//   let result =''
+//   let arr = [1,2,3,4,5,6,7,8,9,0]
+//   for(let i=1;i<string.length;i++){
+//     if(string[i] == string[i].toUpperCase() && !arr.includes(Number(string[i]))){
+//         result +="_"+string[i].toLowerCase()
+//     }else{
+//       result+=string[i]
+//     }
+//   }
+//   // console.log((result+string.slice(pos,string.length)).toLowerCase())
+//   console.log(string[0].toLowerCase()+result)
+// }
+// toUnderscore("App7Test")
