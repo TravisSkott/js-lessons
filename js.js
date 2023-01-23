@@ -259,3 +259,37 @@
 //   }
 
 // isPrime()
+
+// function doors(n){
+//   let status = []
+//   let count = 0
+//   for(let i = 0;i<n;i++){
+//     status.push("closed")
+//   }
+  
+//   for(let i=0;i<n;i++){
+//     for(let j=i;j<n;j=j+i+1){
+//         if(status[j]=="closed"){
+//             status[j]="open"
+//             count++
+//         }else{
+//             status[j]="closed"
+//             count--
+//         }
+//     }
+//   } 
+// }
+// doors(100)
+
+function toUnderscore(string) {
+  let pos=0
+  for(let i=1;i<string.length;i++){
+    if(string[i] == string[i].toUpperCase()){
+        console.log(string.slice(pos,i))
+        pos = i
+        
+    }
+    // console.log(i)
+  }
+}
+toUnderscore("MoviesAndBooks")
