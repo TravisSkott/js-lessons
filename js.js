@@ -229,6 +229,22 @@
 //     return arr.join(",")
 // }
 
+// pickPeaks([1, 2, 3, 8, 7, 6, 5, 4, 1, 2, 3])//{pos[2,4], pick[3,5]}
+
+// function validParentheses(parens) {
+//   let arr = parens.split('')
+//   while (true) {
+//     if (arr.length == 0) return true
+//     else if (arr[0] == ")" || arr[arr.length - 1] == "(") return false
+//     else if (arr.includes("(") && arr.includes(")")) {
+//       let itemLeft = arr.findIndex(item => item == "(")
+//       arr.splice(itemLeft, 1)
+//       let itemRight = arr.findIndex(item => item == ")")
+//       arr.splice(itemRight, 1)
+//     }
+//   }
+// }
+// validParentheses("()")
 ///THE BEST WAY
 // function orderWeight(strng) {
 //     const sum = (str)=>str.split('').reduce((sum,el)=>(sum+(+el)),0);
@@ -246,6 +262,7 @@
 //     return console.log(strng.split(' ').sort(comp).join(' '));
 //    }
 // orderWeight("103 123 4444 99 2000")
+
 
 // function gap(g, m, n) {
 
@@ -280,6 +297,14 @@
 //   } 
 // }
 // doors(100)
+
+
+// let citiesBelarus = ["Pinsk","Minsk","Grodno","Mogilev"]
+// console.log(...citiesBelarus)
+// let obj ={
+//     city:"Pinsk",
+//     population:133000,
+// }
 
 function toUnderscore(string) {
   let pos=0
