@@ -283,7 +283,7 @@
 //   for(let i = 0;i<n;i++){
 //     status.push("closed")
 //   }
-  
+
 //   for(let i=0;i<n;i++){
 //     for(let j=i;j<n;j=j+i+1){
 //         if(status[j]=="closed"){
@@ -320,3 +320,20 @@
 //   console.log(string[0].toLowerCase()+result)
 // }
 // toUnderscore("App7Test")
+
+// function alphabetPosition(text) {
+//   let temp = text.toLowerCase().split('').map(el => {
+//     return (el.charCodeAt(0) < 97 || el.charCodeAt(0) > 122 ) ? null : el.charCodeAt(0) - 96
+//   })
+
+//   for (let i = 0; i < temp.length; i++) {
+//     if (temp[i] == null) {
+//       temp.splice(i, 1)
+//       i--
+//     }
+//   }
+//   // console.log(temp.join(","))
+//   return temp.join(",")
+
+// }
+// alphabetPosition("The sunset sets at twelve o' clock.")
