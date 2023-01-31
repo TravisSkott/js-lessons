@@ -337,3 +337,20 @@
 
 // }
 // alphabetPosition("The sunset sets at twelve o' clock.")
+//   function firstNonRepeatingLetter(s) {
+//     let result = s.toLowerCase().split("").filter((el, index, arr) => {
+//       if (arr.indexOf(el) != index) {
+//       console.log(el)
+//         return el
+//       }
+//     })
+//     let a = ""
+//     for (let i = 0; i < s.length; i++) {
+//       if (!result.includes(s[i].toLowerCase())) {
+//         a = s[i]
+//         break
+//       }
+//     }
+//     console.log(a)
+//   }
+// firstNonRepeatingLetter("A,ahh")
