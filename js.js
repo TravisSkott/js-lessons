@@ -354,3 +354,17 @@
 //     console.log(a)
 //   }
 // firstNonRepeatingLetter("A,ahh")
+// function sumTwoSmallestNumbers(numbers) {  
+//   function comper(a,b){
+//     return a-b
+//   }
+//   let newArr = numbers.sort(comper)
+//   return newArr[0]+newArr[1]
+// }
+function opposite(number) {
+  console.log(number*(-1))
+
+  
+}
+opposite(5)
+// sumTwoSmallestNumbers([19,3,65,5,17])
