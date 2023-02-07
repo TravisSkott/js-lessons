@@ -283,4 +283,3 @@
 //     city:"Pinsk",
 //     population:133000,
 // }
-
